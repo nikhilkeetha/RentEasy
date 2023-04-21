@@ -1,0 +1,101 @@
+plugins {
+    id 'com.android.application'
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+}
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\nikhi\\Desktop\\RentEasy\\RentEasy certificates\\android.keystore')
+            storePassword 'android'
+            keyAlias 'androidkey'
+            keyPassword 'android'
+        }
+    }
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "io.kodular.nsmarttechnologies6.RentEasy"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 32
+        versionName "1.32.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+
+    //location finder
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.libraries.places:places:1.1.0'
+
+
+
+    implementation 'com.google.firebase:firebase-database:19.2.1'
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+    implementation 'com.razorpay:checkout:1.6.15'
+    implementation 'com.google.firebase:firebase-messaging:23.0.0'
+    testImplementation 'tjunit:junit:4.13.2'
+    testImplementation 'org.testng:testng:6.9.6'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+
+    /*Initial Library*/
+    implementation 'com.google.code.gson:gson:2.8.6' // gson
+    implementation 'de.hdodenhof:circleimageview:3.1.0'// circle image view
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'// recycler view
+    implementation 'com.github.bumptech.glide:glide:4.12.0'// glide image show
+    implementation 'androidx.cardview:cardview:1.0.0'// flow layout
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0' // image croper
+    implementation 'com.loopj.android:android-async-http:1.4.10' // api
+    implementation "com.android.billingclient:billing:4.0.0"  // in-app billings
+    /*Initial Library*/
+
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2' // otp
+    implementation 'me.angeldevil:AutoScrollViewPager:1.0.8'// autoscrollview pager
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    implementation 'com.romandanylyk:pageindicatorview:1.0.3' // page indicator
+    implementation 'com.github.Drjacky:ImagePicker:2.1.13'
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
+
+    implementation 'com.google.android.gms:play-services-ads:20.4.0'
+    implementation 'com.onesignal:OneSignal:4.6.3' // one signal
+
+
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+    implementation 'com.jakewharton.rxrelay2:rxrelay:2.0.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+
+
+}

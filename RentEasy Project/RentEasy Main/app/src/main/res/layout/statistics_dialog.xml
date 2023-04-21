@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="340dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_dialog_bg">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_statistics_display"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/trend"
+            android:backgroundTint="@color/black"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_centerVertical="true"/>
+
+        <io.RentEasy.views.MediumTextView
+            android:id="@+id/tv_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listing Statistics"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/iv_statistics_display"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/views_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/header"
+        android:background="@drawable/card_bg"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_views"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_views"
+            android:backgroundTint="@color/primary_text_color"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
+
+        <io.RentEasy.views.MediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total People viewed"
+            android:textColor="@color/primary_text_color"
+            android:layout_toRightOf="@id/iv_views"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true" />
+
+        <io.RentEasy.views.MediumTextView
+            android:id="@+id/tv_total_views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/call_clicks_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/views_lay"
+        android:background="@drawable/card_bg"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/iv_calls"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_phone"
+            android:backgroundTint="@color/primary_text_color"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
+
+        <io.RentEasy.views.MediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estimated call clicks"
+            android:textColor="@color/primary_text_color"
+            android:layout_toRightOf="@id/iv_calls"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true" />
+
+        <io.RentEasy.views.MediumTextView
+            android:id="@+id/tv_total_calls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Whatsapp_clicks_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/call_clicks_lay"
+        android:background="@drawable/card_bg"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/iv_whatsapp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_whatsapp"
+            android:backgroundTint="@color/primary_text_color"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
+
+        <io.RentEasy.views.MediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estimated whatsApp clicks"
+            android:textColor="@color/primary_text_color"
+            android:layout_toRightOf="@id/iv_whatsapp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true" />
+
+        <io.RentEasy.views.MediumTextView
+            android:id="@+id/tv_total_whatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <io.RentEasy.views.MediumTextView
+        android:id="@+id/tv_close_dialog_statiscts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"
+        android:layout_below="@id/Whatsapp_clicks_lay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"/>
+
+
+
+</RelativeLayout>

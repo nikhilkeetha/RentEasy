@@ -1,0 +1,46 @@
+1 Notifications Page
+
+2 Search Filters with listing title
+
+3 Map View
+
+4 Search location name multiple sugesstion
+
+5 Location and address textview for home items 
+
+6 Rewards
+
+7 Coins will be given to users for daily logins and friends referal so users can burn them to call owner or to get discount 
+
+8 Search in top cities
+
+9 Pay rent gateway (with rent due notification and payment history , Auto rent payment with credit card) 
+
+10 Listing booking feature (also with all bookings(MyBookingsActivity) you have done in past)
+
+11 listing rating and reviews
+
+12 one click house shifting 
+
+13 verified listings
+
+14 KYC verification for users and also users can add profile pic.
+
+15 All listings posted by owner (renter can see owner profile with images and description)
+
+16 Renter alert for owner via notification and whatsapp and SMS (Also listing view)
+
+17 Recycler view pagination to make app fast loading
+
+18 Promote listings also with campain report
+
+19 Listing views and call statistics for owners
+
+20 New listing alerts for renters in their area
+
+21 We will collect info when user search in an area
+
+22 Rental products delivery
+
+23 Estimate Rent amount for houses using AI & Machine Learning
+

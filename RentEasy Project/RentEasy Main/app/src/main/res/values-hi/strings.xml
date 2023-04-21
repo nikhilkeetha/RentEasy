@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="testing">नमस्ते</string>
+    <string name="select_language">भाषा चुने</string>
+    <string name="change_language">भाषा बदलो</string>
+    <string name="intro">केवल किराया न खरीदें! भारत में कहीं भी मुफ्त में किराए के लिए कैमरे, वाहन, संपत्तियां..आदि खोजें !!</string>
+    <string name="true_caller_id">5a7m02e2720b38c17433e96a114dd25f7ab85</string>
+    <string name="api_key">AIzaSyBIX9Zr4g7_hq9c4bEL6QZ0TwxZ8uXbKYg</string>
+
+    <string name="app_name">RentEasy</string>
+
+    <!--Validation message-->
+    <string name="internet_error">Please check your internet connection and try again.</string>
+    <string name="enter_email_message">Please enter email address</string>
+    <string name="enter_valid_email_message">Please enter valid email address</string>
+    <string name="enter_password_message">Please enter password</string>
+    <string name="enter_new_password_message">Please new enter password</string>
+    <string name="enter_old_password_message">Please old enter password</string>
+    <string name="enter_confirm_password_message">Please enter confirm password</string>
+    <string name="enter_same_password_message">Confirm password did not match</string>
+    <string name="enter_same_oldpassword_message">Old password and new password should not same</string>
+    <string name="enter_valid_password_message">Password minimum length should be 6 characters</string>
+    <string name="enter_name_message">Please enter name</string>
+    <string name="enter_valid_name_message">Please enter valid name</string>
+    <string name="enter_phone_number_message">Please enter phone number</string>
+    <string name="enter_valid_phone_number_message">Please enter valid phone number</string>
+    <string name="logout_message">Are you sure you want to logout?</string>
+    <string name="select_department_validation">Please select department</string>
+    <string name="commin_soon">Commin Soon!!</string>
+    <string name="ok">OK</string>
+    <string name="logout">Log out</string>
+
+    <string name="verification">Verification</string>
+    <string name="terms_condition"><![CDATA[By proceeding, you agree to our 𝗣𝗿𝗶𝘃𝗮𝗰𝘆 & 𝗧𝗲𝗿𝗺𝘀.]]></string>
+
+    <!--HomeActivity-->
+    <string name="no_properties_banner">No Properties Banner</string>
+    <string name="recommended_properties">Recommended Properties</string>
+    <string name="rewards">Rewards</string>
+    <string name="listen_it_from_happy_users">Listen it from happy users</string>
+    <string name="made_in_for_india"><![CDATA[Made in & for India with ❤.]]></string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="add_property">Add Property</string>
+    <string name="pay_rent">Pay Rent</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="io.RentEasy.fragment.PayRentFragment"
+    android:background="@color/colorPrimary">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m50"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:id="@+id/back_lay"
+            android:layout_width="@dimen/m50"
+            android:layout_height="@dimen/m50">
+
+            <ImageView
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/m15"
+                android:background="@drawable/ic_back"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+        <io.RentEasy.views.MediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="60dp"
+            android:text="Pay Rent"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/m15"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/call_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/m30"
+                android:layout_centerVertical="true"
+                android:background="@drawable/border_bg_red"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="@dimen/m20"
+                    android:paddingEnd="@dimen/m20">
+
+                    <ImageView
+                        android:id="@+id/iv_rewards"
+                        android:layout_width="@dimen/m20"
+                        android:layout_height="@dimen/m20"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/ic__redeem"
+                        android:contentDescription="@string/app_name" />
+
+                    <io.RentEasy.views.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:maxLines="1"
+                        android:text="Rewards"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_14" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_marginStart="@dimen/m5"
+                android:background="@drawable/ic_three_dot_vertical"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/app_name" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/header"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user"
+                android:layout_width="@dimen/m80"
+                android:layout_height="@dimen/m80"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/user_2"
+                android:backgroundTint="@color/grey"
+                android:visibility="gone"/>
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_owner_nm_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="Paying to Varun Varma"
+                android:textColor="#272727"
+                android:textSize="25sp"
+                android:visibility="gone"/>
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_ownerUpi_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="Owner upi id :"
+                android:textColor="@color/primary_text_color"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlined_text_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:hint="₹.Rent per Month"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="6" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <io.RentEasy.views.RegularTextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Payment Method"
+                android:textColor="#272727"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:elevation="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/phone_pe" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginStart="15dp">
+
+                        <io.RentEasy.views.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PhonePe UPI"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#272727"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <io.RentEasy.views.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="99485623@ybl"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="#272727"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="100dp"
+                        app:srcCompat="@drawable/ic_outline_change_circle_24" />
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/coming_soon"
+                android:layout_marginTop="20dp"/>
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Coming Soon!!"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="25dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/gradient_bg">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/rl1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:gravity="center_vertical"
+                            >
+
+                            <io.RentEasy.views.MediumTextView
+                                android:id="@+id/textTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pay Rent to Owner"
+                                android:textColor="@color/colorOnPrimary"
+                                android:textSize="20sp" />
+
+                            <io.RentEasy.views.RegularTextView
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:text="Pay your house or shop rent to your owner online."
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:layout_below="@+id/textTv"
+                                android:layout_marginTop="3dp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/home"
+                                />
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="25dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/gadient_bg_3">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/rl2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:gravity="center_vertical"
+                            >
+
+                            <io.RentEasy.views.MediumTextView
+                                android:id="@+id/textTv2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fast and Secure"
+                                android:textColor="@color/colorOnPrimary"
+                                android:textSize="20sp" />
+
+                            <io.RentEasy.views.RegularTextView
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:text="Fast and Secure transactions with multiple payment methods."
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:layout_below="@+id/textTv2"
+                                android:layout_marginTop="3dp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/iv2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/insurance"
+                                />
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="25dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/gradient_bg_2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/rl3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:gravity="center_vertical"
+                            >
+
+                            <io.RentEasy.views.MediumTextView
+                                android:id="@+id/textTv3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Get Rewarded"
+                                android:textColor="@color/colorOnPrimary"
+                                android:textSize="20sp" />
+
+                            <io.RentEasy.views.RegularTextView
+                                android:layout_width="230dp"
+                                android:layout_height="wrap_content"
+                                android:text="Pay using RentEasy to get rewarded and Offers on Top Brands."
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:layout_below="@+id/textTv3"
+                                android:layout_marginTop="3dp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/iv3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/gift_box"
+                                />
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Are you intrested to pay rent online?"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"/>
+
+            <io.RentEasy.views.MediumTextView
+                android:id="@+id/tv_survey_pay"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:textColor="@color/colorAccent"
+                android:text="Yes"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:background="@drawable/button_bg_white_253"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-1019423261424750/8754475886"
+        ></com.google.android.gms.ads.AdView>
+
+
+
+    <io.RentEasy.views.MediumTextView
+        android:id="@+id/tv_pay_rent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m50"
+        android:layout_marginTop="@dimen/m5"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="Proceed to Pay"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

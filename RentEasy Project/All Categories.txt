@@ -1,0 +1,92 @@
+All Categories
+
+1.Properties
+2.Vechicles
+3.Camera & Film making
+4.Construction Tools
+5.Books
+6.Clothing
+7.Music & Parties
+8.Function & Events
+9.Computers Gadgets
+
+
+Sub Categories
+
+1) Properties ***
+   1.House
+   2.Shop
+   3.Commercial space for lease
+   4.PG/Hostel
+   5.Land for Lease
+
+2) Vechicles ***
+   1.Bikes
+   2.Cars
+   3.Lorries
+   4.Auto
+   5.Mini Trucks
+   6.Cycles -- remove
+
+3) Cameras *
+   1.Cameras DSLR
+   2.Video Recorder
+   3.Drones
+   4.Gimbal & Stand
+   5.Soft Lights
+   6.Action Camera
+ 
+4) Tools - add only heavy machinary **
+   1.JCB ** and chain JCB and Doozer
+   2.Crane **
+   3.Ladder & Stools 
+   4.Drilllers
+   5.Cutters
+   6.Welding Machines
+   7.Generator 
+   8.Concreate Machine
+   9.Tree cutter
+   10.Hammer,Axe
+   11.Soil Digger
+
+5) Books - remove
+   1.Comics
+   2.Novels
+   3.Text books
+   4.Reference books
+   5.Study Material
+
+6) Clothing  - remove
+   1.Shoes
+   2.Suit & Blazzers
+   3.Ornaments
+   4.for men
+   5 for women
+
+7) Music - remove
+   1.Sound system
+   2.disco lighting
+   3.dj
+   4.piano
+   5.drums
+   6.guiter
+   7.voilin
+
+8) function
+   1.function halls - ***
+   2.tents
+   3.tables & chairs
+   4.stage & decorations
+   5.fans & coolers
+   6.cooking utensils
+
+9) Computers - remove
+   1.gaming consoles
+   2.joysticks
+   3.projectors
+   4.printers
+
+
+ 
+
+

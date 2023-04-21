@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="text_24">26sp</dimen>
+    <dimen name="text_22">24sp</dimen>
+    <dimen name="text_20">22sp</dimen>
+    <dimen name="text_18">20sp</dimen>
+    <dimen name="text_16">18sp</dimen>
+    <dimen name="text_15">17sp</dimen>
+    <dimen name="text_14">16sp</dimen>
+    <dimen name="text_13">15sp</dimen>
+    <dimen name="text_12">14sp</dimen>
+    <dimen name="text_11">13sp</dimen>
+    <dimen name="text_10">12sp</dimen>
+    <dimen name="text_8">10sp</dimen>
+
+    <dimen name="button_hight_50">52dp</dimen>
+    <dimen name="header_hight">55dp</dimen>
+
+    <dimen name="m450">460dp</dimen>
+    <dimen name="m326">336dp</dimen>
+    <dimen name="m308">318dp</dimen>
+    <dimen name="m300">310dp</dimen>
+    <dimen name="m260">270dp</dimen>
+    <dimen name="m250">260dp</dimen>
+    <dimen name="m245">255dp</dimen>
+    <dimen name="m270">280dp</dimen>
+    <dimen name="m200">210dp</dimen>
+    <dimen name="m190">200dp</dimen>
+    <dimen name="m230">240dp</dimen>
+    <dimen name="m180">190dp</dimen>
+    <dimen name="m170">180dp</dimen>
+    <dimen name="m160">170dp</dimen>
+    <dimen name="m150">160dp</dimen>
+    <dimen name="m145">155dp</dimen>
+    <dimen name="m138">148dp</dimen>
+    <dimen name="m140">150dp</dimen>
+    <dimen name="m130">140dp</dimen>
+    <dimen name="m120">130dp</dimen>
+    <dimen name="m100">110dp</dimen>
+    <dimen name="m110">120dp</dimen>
+    <dimen name="m90">100dp</dimen>
+    <dimen name="m80">90dp</dimen>
+    <dimen name="m75">85dp</dimen>
+    <dimen name="m70">80dp</dimen>
+    <dimen name="m60">70dp</dimen>
+    <dimen name="m55">65dp</dimen>
+    <dimen name="m50">60dp</dimen>
+    <dimen name="m45">55dp</dimen>
+    <dimen name="m40">50dp</dimen>
+    <dimen name="m35">45dp</dimen>
+    <dimen name="m33">43dp</dimen>
+    <dimen name="m30">35dp</dimen>
+    <dimen name="m28">30dp</dimen>
+    <dimen name="m25">27dp</dimen>
+    <dimen name="m24">26dp</dimen>
+    <dimen name="m23">25dp</dimen>
+    <dimen name="m22">24dp</dimen>
+    <dimen name="m20">22dp</dimen>
+    <dimen name="m18">20dp</dimen>
+    <dimen name="m15">17dp</dimen>
+    <dimen name="m12">14dp</dimen>
+    <dimen name="m10">12dp</dimen>
+    <dimen name="m8">10dp</dimen>
+    <dimen name="m7">9dp</dimen>
+    <dimen name="m5">7dp</dimen>
+    <dimen name="m1">3dp</dimen>
+
+
+</resources>

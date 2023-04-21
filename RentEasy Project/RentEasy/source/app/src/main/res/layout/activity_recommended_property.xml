@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.kodular.nsmarttechnologies6.RentEasy.activity.RecommendedPropertyActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_lay"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m50"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:id="@+id/back_lay"
+                android:layout_width="@dimen/m50"
+                android:layout_height="@dimen/m50">
+
+                <ImageView
+                    android:layout_width="@dimen/m25"
+                    android:layout_height="@dimen/m25"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:background="@drawable/ic_back"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <io.RentEasy.views.MediumTextView
+                android:id="@+id/title_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/recommended_properties"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f05656">
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_no_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/m5"
+                android:paddingBottom="@dimen/m5"
+                android:text="Total  Properties Found"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/red"
+            android:visibility="visible"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+        <com.google.android.gms.maps.MapView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_centerHorizontal="true"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-1019423261424750/2762312056"></com.google.android.gms.ads.AdView>
+
+
+
+    <LinearLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m50"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:background="#F4F4F4">
+
+        <RelativeLayout
+            android:id="@+id/mapLay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/iv_map"
+                    android:layout_width="@dimen/m25"
+                    android:layout_height="@dimen/m25"
+                    android:background="@drawable/ic_map"
+                    android:contentDescription="@string/app_name" />
+
+                <io.RentEasy.views.RegularTextView
+                    android:id="@+id/tv_mapView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/m5"
+                    android:maxLines="1"
+                    android:text="MapView"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_16" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginBottom="@dimen/m10"
+            android:background="@color/primary_text_color"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/filter_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="@dimen/m25"
+                    android:layout_height="@dimen/m25"
+                    android:background="@drawable/ic_filter"
+                    android:contentDescription="@string/app_name" />
+
+
+                <io.RentEasy.views.RegularTextView
+                    android:id="@+id/tv_noFilters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:maxLines="1"
+                    android:text="Filter"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

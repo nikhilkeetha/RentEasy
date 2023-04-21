@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RentEasy Associates</string>
+    <string-array name="Spinner_rent_cycle">
+        <item>Month</item>
+        <item>Day</item>
+        <item>Hour</item>
+    </string-array>
+</resources>

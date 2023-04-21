@@ -1,0 +1,13 @@
+if (totalPostings.equals("0")) {
+                updatePostings = FirebaseDatabase.getInstance().getReference().child(UserPhnNm);
+                updatePostings.child("1").setValue(id + "," + pincode+HorS);
+                updateNoOfPostings = FirebaseDatabase.getInstance().getReference().child("Phone Numbers");
+                updateNoOfPostings.child(UserPhnNm).setValue("1");
+            }else {
+                String temp1 = "1";
+                int add = Integer.parseInt(totalPostings) + Integer.parseInt(temp1);
+                updatePostings = FirebaseDatabase.getInstance().getReference().child(UserPhnNm);
+                updatePostings.child(String.valueOf(add)).setValue(id + "," + pincode+HorS);
+                updateNoOfPostings = FirebaseDatabase.getInstance().getReference().child("Phone Numbers");
+                updateNoOfPostings.child(UserPhnNm).setValue(add);
+            }

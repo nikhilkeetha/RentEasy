@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "318847708473",
+    "firebase_url": "https://renteasy-f31ba.firebaseio.com",
+    "project_id": "renteasy-f31ba",
+    "storage_bucket": "renteasy-f31ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318847708473:android:eecb686bbdce8557178ce8",
+        "android_client_info": {
+          "package_name": "io.kodular.nsmarttechnologies6.RentEasy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318847708473-2h40r38qngmb1q683isrl8fpnl9gt8s0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.kodular.nsmarttechnologies6.RentEasy",
+            "certificate_hash": "17547d2db25b62c8fd989f4800e6d26e7baebd06"
+          }
+        },
+        {
+          "client_id": "318847708473-51lkrhvecnisdrqso60jnh858i0n59kt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.kodular.nsmarttechnologies6.RentEasy",
+            "certificate_hash": "b8db15f17987fd49b2d8f56ca84aa5afa2b122f9"
+          }
+        },
+        {
+          "client_id": "318847708473-r5lilbjsl2eadnbr8gi61o1u2b82dko3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkujmXWMuy87EArk8SYl4yv5HPX7HaFgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318847708473-r5lilbjsl2eadnbr8gi61o1u2b82dko3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

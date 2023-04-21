@@ -1,0 +1,28 @@
+0-image1
+1-image2
+2-image3
+3-image4
+4-image5
+5-rent amount , rent cycle(m-month,d-day,h-hour)
+6-title
+7-description
+8-listing posted date
+9-Status(A-avialable,N-not)
+10-category
+11-subcategory
+12-total listing view
+13-address
+14-latitude
+15-longitude
+16-owner name  **deleted and removed
+17-owner phone number
+18-is promoted listing
+19-call & whatsapp clicks (call,whatsapp)  **deleted/remove
+20-city(hyd,vizag,..)(1,2,..)
+21-area in city(1,2,3,...)
+is deleted-listing deleted code
+D-deleted(new version)
+22-security deposit and only for ew categories
+23-all sub details.
+24-is verified
+

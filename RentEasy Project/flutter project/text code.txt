@@ -1,0 +1,7 @@
+text code
+
+
+Text(
+                        'RentEasy',
+                        style: TextStyle(fontSize: 50,fontWeight: FontWeight.normal , color: Colors.white,fontFamily: "LuckiestGuy"),          
+                      ),

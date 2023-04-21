@@ -1,0 +1,35 @@
+private class LoadImage extends AsyncTask<String,Void, Bitmap> {
+            ImageView imageView;
+            public LoadImage(ImageView ivImage) {
+                this.imageView = ivImage;
+            }
+
+            @Override
+            protected Bitmap doInBackground(String... strings) {
+                String I1Url = strings[0];
+                Bitmap bitmap = null;
+                try {
+                    InputStream inputStream = new java.net.URL(I1Url).openStream();
+                    bitmap = BitmapFactory.decodeStream(inputStream);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return bitmap;
+            }
+            @Override
+            protected void onPostExecute(Bitmap bitmap) {
+
+                imageView.setImageBitmap(bitmap);
+            }
+
+        }
+
+
+
+if ( Image.equals("No")) {
+                LoadImage loadImage = new LoadImage(ivImage);
+                loadImage.execute(noImageUrl);
+            }else {
+                LoadImage loadImage = new LoadImage(ivImage);
+                loadImage.execute(Image);
+            }

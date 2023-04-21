@@ -1,0 +1,25 @@
+private void getData() {
+
+        list = new ArrayList<>();
+
+        list.add(new Property("6000","1BHK at huzurnagar","Saaho","132","8367530592"));
+
+        list.add(new Property("7000","3BHK at kodad","Laddu","132","8367530592"));
+
+        list.add(new Property("7000","3BHK at kodad","Laddu","132","8367530592"));
+
+    }
+
+
+
+
+
+ String[] split = value1.split(",");
+                                    String I1raw = split[0];
+                                    String I1Url = I1raw.replace("\\","");
+                                    String Rate = split[15];
+                                    String OwnerNm = split[17];
+                                    String Rooms = split[6];
+                                    String Address = split[11];
+                                    String Description = Rooms + " at " + Address;
+                                    String PhnNo = split[18];

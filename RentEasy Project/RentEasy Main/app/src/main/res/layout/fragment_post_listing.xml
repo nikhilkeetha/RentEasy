@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/bg_variant_thick">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m50"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:id="@+id/back_lay"
+            android:layout_width="@dimen/m50"
+            android:layout_height="@dimen/m50">
+
+            <ImageView
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/m15"
+                android:background="@drawable/ic_back"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+        <io.RentEasy.views.MediumTextView
+            android:id="@+id/tv_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Select Category"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18" />
+
+        <ImageView
+            android:id="@+id/iv_help"
+            android:layout_width="@dimen/m25"
+            android:layout_height="@dimen/m25"
+            android:layout_marginStart="@dimen/m5"
+            android:background="@drawable/ripple_3"
+            android:src="@drawable/ic_help"
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/header"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/category_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ripple_dark">
+
+                        <ImageView
+                            android:id="@+id/itm1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/home__1_"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_centerVertical="true"/>
+
+                        <io.RentEasy.views.MediumTextView
+                            android:id="@+id/tv_itm_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="House"
+                            android:layout_toRightOf="@+id/itm1"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="25sp"
+                            android:textColor="@color/hint_color"/>
+
+                        <ImageView
+                            android:id="@+id/check1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ic_circle"
+                            android:backgroundTint="@color/hint_color"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ripple_dark">
+
+                        <ImageView
+                            android:id="@+id/itm2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/shops"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_centerVertical="true"/>
+
+                        <io.RentEasy.views.MediumTextView
+                            android:id="@+id/tv_itm_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shop"
+                            android:layout_toRightOf="@+id/itm2"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="25sp"
+                            android:textColor="@color/hint_color"/>
+
+                        <ImageView
+                            android:id="@+id/check2"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ic_circle"
+                            android:backgroundTint="@color/hint_color"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ripple_dark">
+
+                        <ImageView
+                            android:id="@+id/itm4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/function_hall"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_centerVertical="true"/>
+
+                        <io.RentEasy.views.MediumTextView
+                            android:id="@+id/tv_itm_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Function Hall"
+                            android:layout_toRightOf="@+id/itm4"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="25sp"
+                            android:textColor="@color/hint_color"/>
+
+                        <ImageView
+                            android:id="@+id/check4"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ic_circle"
+                            android:backgroundTint="@color/hint_color"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ripple_dark">
+
+                        <ImageView
+                            android:id="@+id/itm5"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/bike"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_centerVertical="true"/>
+
+                        <io.RentEasy.views.MediumTextView
+                            android:id="@+id/tv_itm_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bike"
+                            android:layout_toRightOf="@+id/itm5"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="25sp"
+                            android:textColor="@color/hint_color"/>
+
+                        <ImageView
+                            android:id="@+id/check5"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ic_circle"
+                            android:backgroundTint="@color/hint_color"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ripple_dark">
+
+                        <ImageView
+                            android:id="@+id/itm6"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/cars"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_centerVertical="true"/>
+
+                        <io.RentEasy.views.MediumTextView
+                            android:id="@+id/tv_itm_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Car"
+                            android:layout_toRightOf="@+id/itm6"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="25sp"
+                            android:textColor="@color/hint_color"/>
+
+                        <ImageView
+                            android:id="@+id/check6"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ic_circle"
+                            android:backgroundTint="@color/hint_color"
+                            android:layout_marginRight="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/details_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center">
+
+
+                <RelativeLayout
+                    android:id="@+id/lay_spin_1"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border_line">
+
+                    <Spinner
+                        android:id="@+id/spinner_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/Spinner_type"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_spin_2"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border_line">
+
+                    <Spinner
+                        android:id="@+id/spinner_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/Spinner_rooms"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_spin_3"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border_line">
+
+                    <Spinner
+                        android:id="@+id/spinner_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/Spinner_parking"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_spin_4"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border_line">
+
+                    <Spinner
+                        android:id="@+id/spinner_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/spinner_furnished"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_spin_5"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border_line">
+
+                    <Spinner
+                        android:id="@+id/spinner_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/Spinner_facing"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lay_spin_6"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_border_line">
+
+                    <Spinner
+                        android:id="@+id/spinner_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/Spinner_floor"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/select_brand_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/spinner_border_line"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <io.RentEasy.views.RegularTextView
+                        android:id="@+id/tv_selected_brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Select Brand"
+                        android:textColor="?attr/text_color2"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/ic_drop_down"
+                        android:backgroundTint="#757575" />
+
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/area_et_outline"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Area in Sq.ft"
+                    android:visibility="gone">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlined_text_input_layout0"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Title">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences"
+                        android:maxLength="25"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlined_text_input_layout11"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Description">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences"
+                        android:maxLength="2000"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <CheckBox
+                    android:id="@+id/roofCb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:buttonTint="@color/red"
+                    android:text="Sun Roof"
+                    android:gravity="center_vertical"
+                    android:textColor="?attr/text_color2"
+                    android:textStyle="normal"
+                    android:layout_marginStart="20dp"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/images_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/imageLay"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/border_ripple">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/ic_baseline_photo_camera_24"
+                            android:backgroundTint="@color/secondary_text_color"/>
+
+                        <io.RentEasy.views.MediumTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Click here to add Images"
+                            android:textColor="@color/secondary_text_color"
+                            android:textSize="14dp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/spinner_border_line">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/image1"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_image_default"
+                        android:scaleType="centerInside"/>
+
+                </RelativeLayout>
+
+                <io.RentEasy.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*Thumbnail or Main image."
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="30dp"
+                    android:textSize="17sp"
+                    android:textColor="?attr/text_color2"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/spinner_border_line">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/image2"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_image_default"
+                        android:scaleType="centerInside"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/spinner_border_line">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/image3"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_image_default"
+                        android:scaleType="centerInside"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/spinner_border_line">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/image4"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_image_default"
+                        android:scaleType="centerInside"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/spinner_border_line">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:id="@+id/image5"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_image_default"
+                        android:scaleType="centerInside"/>
+
+                </RelativeLayout>
+
+                <io.RentEasy.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Note:- You can add upto 5 images and you can change it anytime."
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="17sp"
+                    android:textColor="?attr/text_color2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/location_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/city_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_ripple"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="15dp">
+
+                    <io.RentEasy.views.RegularTextView
+                        android:id="@+id/tv_selected_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select City"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/hint_color" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_drop_down"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="@color/secondary_text_color"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/search_landmark_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_ripple"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="15dp">
+
+                    <io.RentEasy.views.RegularTextView
+                        android:id="@+id/tv_selected_landmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Search Locality/Landmarks"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/iv_search_logo"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/hint_color" />
+
+                    <ImageView
+                        android:id="@+id/iv_search_logo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_search"
+                        android:backgroundTint="@color/hint_color"/>
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Enter Address">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardElevation="10dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="25dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:background="@drawable/ripple_3"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/i_mark"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            app:srcCompat="@drawable/ic_outline_add_location" />
+
+                        <io.RentEasy.views.MediumTextView
+                            android:id="@+id/t_adOnMap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add on Map"
+                            android:textColor="@color/white"
+                            android:layout_marginStart="8dp"
+                            android:textSize="18sp"/>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/price_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/spinner_border_line"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/et_rent_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Rent amount"
+                        android:layout_marginEnd="10dp"
+                        android:background="@null"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:inputType="number"
+                        android:maxLength="7"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textCursorDrawable="@drawable/cursor_color"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toLeftOf="@id/RentCycle"
+                        android:background="@color/hint_color"/>
+
+                    <Spinner
+                        android:id="@+id/RentCycle"
+                        android:layout_width="110dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:entries="@array/Spinner_rent_cycle"/>
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_deposit_lay"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Security Deposit/Advance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_deposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="7"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                //only for developers
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <io.RentEasy.views.RegularEditText
+                        android:id="@+id/et_ownerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="owner name"/>
+
+                    <io.RentEasy.views.RegularEditText
+                        android:id="@+id/et_ownerPho"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_ownerName"
+                        android:layout_marginTop="10dp"
+                        android:hint="owner phone number"
+                        android:maxLength="10"
+                        android:inputType="number"/>
+
+                </RelativeLayout> //only for developers
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/post_lay"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-1019423261424750/8754475886"></com.google.android.gms.ads.AdView>
+
+    <LinearLayout
+        android:id="@+id/post_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/ripple_3"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_post_add"
+            android:backgroundTint="@color/white"
+            android:visibility="gone"/>
+
+        <io.RentEasy.views.MediumTextView
+            android:id="@+id/tv_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:layout_marginStart="8dp"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

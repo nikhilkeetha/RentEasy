@@ -1,0 +1,60 @@
+if (rooms.getSelectedItem().toString() == "Shop"){
+            getNoOfProperties = FirebaseDatabase.getInstance().getReference().child(etPincode.getText().toString().trim() + "S");
+            getNoOfProperties.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    
+                    propertyDetails = FirebaseDatabase.getInstance().getReference().child(etPincode.getText().toString().trim() + "S");
+                    if (dataSnapshot.hasChild("no of S Registered"){
+                        double num1 = Double.parseDouble(SnoOfProperties);
+                        double num2 = Double.parseDouble("1");
+                        double sum = num1 + num2;
+                        propertyDetails.child(Double.toString(sum)).setValue(I1Url + "," + I2Url + "," + I3Url + "," + I4Url + "," + I5Url + "," + propertyType + "," + NoRooms + "," + facing + "," + status + "," + floor + "," + parking + "," + address + "," + pincode + "," + "lat" + "," + "lng" + "," + rent + "," + sum + "," + "ownerNm" + "," + "phnNm" + "," + "N");
+                        getNoOfProperties.child("no of S Registered").setValue(Double.toString(sum));
+
+                    }else {
+			propertyDetails.child("1").setValue(I1Url + "," + I2Url + "," + I3Url + "," + I4Url + "," + I5Url + "," + propertyType + "," + NoRooms + "," + facing + "," + status + "," + floor + "," + parking + "," + address + "," + pincode + "," + "lat" + "," + "lng" + "," + rent + "," + "1" + "," + "ownerNm" + "," + "phnNm" + "," + "N");
+                        getNoOfProperties.child("no of S Registered").setValue("1");
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }else {
+            getNoOfProperties = FirebaseDatabase.getInstance().getReference().child(etPincode.getText().toString().trim() + "H");
+            getNoOfProperties.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    String HnoOfProperties = dataSnapshot.child("no of H Registered").getValue().toString();
+                    propertyDetails = FirebaseDatabase.getInstance().getReference().child(etPincode.getText().toString().trim() + "H");
+                    if (HnoOfProperties == ""){
+                        propertyDetails.child("1").setValue(I1Url + "," + I2Url + "," + I3Url + "," + I4Url + "," + I5Url + "," + propertyType + "," + NoRooms + "," + facing + "," + status + "," + floor + "," + parking + "," + address + "," + pincode + "," + "lat" + "," + "lng" + "," + rent + "," + "1" + "," + "ownerNm" + "," + "phnNm" + "," + "N");
+                        getNoOfProperties.child("no of H Registered").setValue("1");
+                    }else {
+                        double num1 = Double.parseDouble(HnoOfProperties);
+                        double num2 = Double.parseDouble("1");
+                        double sum = num1 + num2;
+                        propertyDetails.child(Double.toString(sum)).setValue(I1Url + "," + I2Url + "," + I3Url + "," + I4Url + "," + I5Url + "," + propertyType + "," + NoRooms + "," + facing + "," + status + "," + floor + "," + parking + "," + address + "," + pincode + "," + "lat" + "," + "lng" + "," + rent + "," + sum + "," + "ownerNm" + "," + "phnNm" + "," + "N");
+                        getNoOfProperties.child("no of H Registered").setValue(Double.toString(sum));
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+
+
+
+
+
+
+
+propertyDetails = FirebaseDatabase.getInstance().getReference().child(etPincode.getText().toString().trim() + "H");
+        propertyDetails.child("1").setValue(I1Url + "," + I2Url + "," + I3Url + "," + I4Url + "," + I5Url + "," + propertyType + "," + NoRooms + "," + facing + "," + status + "," + floor + "," + parking + "," + address + "," + pincode + "," + "lat" + "," + "lng" + "," + rent + "," + "1" + "," + "ownerNm" + "," + "phnNm" + "," + "N");
+

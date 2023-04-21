@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/border_curve_bg"
+    >
+
+    <io.RentEasy.views.MediumTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply for booking"
+        android:layout_marginTop="15dp"
+        android:textColor="?attr/text_color"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"/>
+
+    <RelativeLayout
+        android:id="@+id/date_pick_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_ripple"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="15dp">
+
+        <io.RentEasy.views.RegularTextView
+            android:id="@+id/tv_selected_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:textColor="?attr/t_c_3" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_outline_date_range_24"
+            android:backgroundTint="?attr/t_c_3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlined_text_input_layout1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Describe requirements (Optional)"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/date_pick_lay">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/book_lay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/ripple_3"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <io.RentEasy.views.MediumTextView
+            android:id="@+id/tv_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply Now"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

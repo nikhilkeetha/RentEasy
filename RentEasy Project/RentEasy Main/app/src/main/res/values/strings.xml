@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">RentEasy</string>
+
+    <string name="intro">Dont Buy just rent Find cameras,vehicles,properties..etc for rent anywhere in India for free</string>
+
+    <string name="true_caller_id">5a7m02e2720b38c17433e96a114dd25f7ab85</string>
+    <string name="api_key">AIzaSyBIX9Zr4g7_hq9c4bEL6QZ0TwxZ8uXbKYg</string>
+
+    <!--Validation message-->
+    <string name="internet_error">Please check your internet connection and try again.</string>
+    <string name="enter_email_message">Please enter email address</string>
+    <string name="enter_valid_email_message">Please enter valid email address</string>
+    <string name="enter_password_message">Please enter password</string>
+    <string name="enter_new_password_message">Please new enter password</string>
+    <string name="enter_old_password_message">Please old enter password</string>
+    <string name="enter_confirm_password_message">Please enter confirm password</string>
+    <string name="enter_same_password_message">Confirm password did not match</string>
+    <string name="enter_same_oldpassword_message">Old password and new password should not same</string>
+    <string name="enter_valid_password_message">Password minimum length should be 6 characters</string>
+    <string name="enter_name_message">Please enter name</string>
+    <string name="enter_valid_name_message">Please enter valid name</string>
+    <string name="enter_phone_number_message">Please enter phone number</string>
+    <string name="enter_valid_phone_number_message">Please enter valid phone number</string>
+    <string name="logout_message">Are you sure you want to logout?</string>
+    <string name="select_department_validation">Please select department</string>
+    <string name="commin_soon">Commin Soon!!</string>
+    <string name="ok">OK</string>
+    <string name="logout">Log out</string>
+
+    <string name="testing">hello</string>
+
+
+    <!--OTP-->
+    <string name="verification">Verification</string>
+    <string name="terms_condition"><![CDATA[By proceeding, you agree to our 𝗣𝗿𝗶𝘃𝗮𝗰𝘆 & 𝗧𝗲𝗿𝗺𝘀.]]></string>
+
+    <!--HomeActivity-->
+    <string name="no_properties_banner">No Properties Banner</string>
+    <string name="recommended_properties">Recommended Properties</string>
+    <string name="rewards">Rewards</string>
+    <string name="listen_it_from_happy_users">Listen it from happy users</string>
+    <string name="made_in_for_india"><![CDATA[Made in India.]]></string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="add_property">Add Property</string>
+    <string name="pay_rent">Pay Rent</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_language">Select Language</string>
+    <string name="change_language">Change Language</string>
+    <string name="how_2"><![CDATA[2. Get Calls & Messages.]]></string>
+    <!--HomeActivity-->
+
+    <string-array name="Spinner_rooms">
+        <item>Select No of Rooms</item>
+        <item>1BHK</item>
+        <item>2BHK</item>
+        <item>3BHK</item>
+        <item>1RK</item>
+    </string-array>
+
+    <string-array name="spinner_furnished">
+        <item>Furnished</item>
+        <item>Semi-Furnished</item>
+        <item>Not Furnished</item>
+    </string-array>
+
+    <string-array name="Spinner_facing">
+        <item>Select Facing</item>
+        <item>North</item>
+        <item>South</item>
+        <item>East</item>
+        <item>West</item>
+    </string-array>
+
+    <string-array name="Spinner_parking">
+        <item>Select Parking</item>
+        <item>2-wheeler</item>
+        <item>4-wheeler</item>
+        <item>both</item>
+    </string-array>
+
+    <string-array name="Spinner_type">
+        <item>Select Building Type</item>
+        <item>Individual</item>
+        <item>Apartment</item>
+    </string-array>
+
+    <string-array name="Spinner_floor">
+        <item>Select Floor Number</item>
+        <item>Ground Floor</item>
+        <item>1st Floor</item>
+        <item>2st Floor</item>
+        <item>3st Floor</item>
+        <item>4+ Floor</item>
+    </string-array>
+
+    <string-array name="Spinner_rooms2">
+        <item>1BHK</item>
+        <item>2BHK</item>
+        <item>3BHK</item>
+        <item>1RK</item>
+        <item>All</item>
+    </string-array>
+
+    <string-array name="Spinner_type2">
+        <item>Individual</item>
+        <item>Apartment</item>
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="Spinner_survey">
+        <item>Select a reason</item>
+        <item>I found renter using RentEasy.</item>
+        <item>I found renter offline.</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="Spinner_rent_cycle">
+        <item>Month</item>
+        <item>Day</item>
+        <item>Hour</item>
+    </string-array>
+
+</resources>

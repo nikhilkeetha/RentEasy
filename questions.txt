@@ -1,0 +1,41 @@
+images (min-1;max-5)
+title
+description
+address
+city
+area
+rent amount (month/day/hour)
+security deposit amount (no need for JCB,Crane,PG's)
+
+Questions:
+for houses:
+1) building type (individual/apartment)
+2) Rooms (1BHK,2BHK,3BHk,1RK)
+3) Parking (2-wheeler,4-wheeler,both)
+4) Furnished,Semi-Furnished,Not-Furnished
+5) Facing (North,south,east,west)
+6) Floor number (Ground,1,2,3,4+)
+
+for shops:
+1,3,5,6 same question of houses
+
+for PG/Hostel:
+1) Rooms type (AC,NON-AC,Both)
+2) Parking
+3) wifi?
+4) food?
+5) hot water?
+6) washing machine?
+
+for function hall:
+1)type (Ac or non ac)
+
+for bikes
+1) brand
+
+for cars:
+1)brand
+2)sunroof?
+
+
+

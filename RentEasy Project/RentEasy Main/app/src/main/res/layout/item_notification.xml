@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/m10"
+    android:layout_marginTop="@dimen/m10"
+    android:layout_marginEnd="@dimen/m10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center|center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:background="@color/red" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_toEndOf="@+id/iv_image">
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hurry! you won a Reward"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:text="Get 50% OFF on any order on Zomato. Use your coupon Now.(expires on01-09-21)"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_14" />
+
+            <io.RentEasy.views.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name2"
+                android:text="Yesterday,6:36 pm"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="@dimen/text_14" />
+
+
+        </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.0dp"
+            android:layout_marginTop="@dimen/m5"
+            android:background="@color/hint_color" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

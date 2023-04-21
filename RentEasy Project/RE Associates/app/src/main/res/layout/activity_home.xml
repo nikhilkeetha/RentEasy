@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.HomeActivity"
+    android:background="#F1F3FF">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp">
+
+        <com.renteasy.associates.views.BoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_image"
+            android:text="Hi, Nikhil"
+            android:textColor="@color/primary_text_color"
+            android:textSize="25sp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_notification"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/ic_notification"
+                    android:backgroundTint="@color/primary_text_color"
+                    android:contentDescription="@string/app_name"
+                    android:layout_marginLeft="5dp" />
+
+                <TextView
+                    android:id="@+id/notification_counter"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:text="5"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/notification_bg_white" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_account"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_baseline_account_circle_24"
+                android:backgroundTint="@color/primary_text_color"
+                android:contentDescription="@string/app_name"
+                android:layout_marginLeft="10dp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/earning_lay"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/header"
+        android:background="@drawable/amount_bg__1_">
+
+
+        <com.renteasy.associates.views.RegularTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Commissions"
+            android:textColor="#CAC9C9"
+            android:layout_marginTop="35dp"
+            android:textSize="15sp"
+            android:layout_centerHorizontal="true"/>
+
+        <com.renteasy.associates.views.BoldTextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹5,236.75"
+            android:textColor="@color/white"
+            android:layout_below="@id/tv_title"
+            android:textSize="40sp"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_amount"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_profit_or_loss"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_loss"
+                android:backgroundTint="@color/red"
+                android:layout_marginTop="20dp"
+                />
+
+            <com.renteasy.associates.views.MediumTextView
+                android:id="@+id/tv_amount_profit_or_loss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3%"
+                android:textColor="@color/red"
+                android:layout_toRightOf="@id/iv_profit_or_loss"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"/>
+
+            <com.renteasy.associates.views.RegularTextView
+                android:id="@+id/tv_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_amount_profit_or_loss"
+                android:text="in Last 7 Days"
+                android:textColor="#CAC9C9"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+     <RelativeLayout
+         android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/earning_lay"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rLay1"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/card_bg_2">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/wishlist" />
+
+            <com.renteasy.associates.views.MediumTextView
+                android:id="@+id/tv_count1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="500"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <com.renteasy.associates.views.RegularTextView
+                android:id="@+id/total_sold1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_count1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Total Listings"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_more"
+                android:backgroundTint="@color/secondary_text_color"
+                android:layout_toRightOf="@id/total_sold1"
+                android:layout_below="@id/tv_count1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLay2"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/rLay1"
+            android:background="@drawable/card_bg_2"
+            >
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cash_on_delivery" />
+
+            <com.renteasy.associates.views.MediumTextView
+                android:id="@+id/tv_count2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="500"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <com.renteasy.associates.views.RegularTextView
+                android:id="@+id/total_sold2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_count2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Total Plans Sold"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_more"
+                android:backgroundTint="@color/secondary_text_color"
+                android:layout_toRightOf="@id/total_sold2"
+                android:layout_below="@id/tv_count2"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+
+     </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay1"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rLay3"
+            android:layout_width="170dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/card_bg_2">
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cash" />
+
+            <com.renteasy.associates.views.MediumTextView
+                android:id="@+id/tv_count3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="₹10,000.00"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <com.renteasy.associates.views.RegularTextView
+                android:id="@+id/total_sold3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_count3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Total Plans Cost"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_more"
+                android:backgroundTint="@color/secondary_text_color"
+                android:layout_toRightOf="@id/total_sold3"
+                android:layout_below="@id/tv_count3"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLay4"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/rLay3"
+            android:background="@drawable/card_bg_2"
+            >
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/team" />
+
+            <com.renteasy.associates.views.MediumTextView
+                android:id="@+id/tv_count4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="500"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <com.renteasy.associates.views.RegularTextView
+                android:id="@+id/total_sold4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_count4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Total Owners"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_more"
+                android:backgroundTint="@color/secondary_text_color"
+                android:layout_toRightOf="@id/total_sold4"
+                android:layout_below="@id/tv_count4"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

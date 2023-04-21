@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/card_view_bg_clr">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@string/app_name"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:src="@drawable/frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="3dp">
+
+                <io.RentEasy.views.MediumTextView
+                    android:id="@+id/tv_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="10,000 per month"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:id="@+id/verfied_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:background="@drawable/verfied_small"
+                    android:layout_marginRight="1dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_verified"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/ic_verified"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/colorOnPrimary"/>
+
+                    <io.RentEasy.views.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verified"
+                        android:textColor="@color/colorOnPrimary"
+                        android:layout_toRightOf="@id/iv_verified"
+                        android:textSize="10dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_centerVertical="true"/>
+
+
+                </RelativeLayout>
+
+                <io.RentEasy.views.MediumTextView
+                    android:id="@+id/tv_promoted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Ad "
+                    android:textColor="@color/white"
+                    android:background="@drawable/ad_bg"
+                    android:layout_toRightOf="@+id/tv_rate"
+                    android:textSize="14.5sp"
+                    android:visibility="gone"/>
+
+
+
+                <ImageView
+                    android:id="@+id/iv_like"
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/primary_text_color"
+                    android:background="@drawable/ic_empty_heart"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone"/>
+
+
+            </RelativeLayout>
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="2 BHK Flat  BHK Flat  BHK Flat  BHK Flat  BHK Flat"
+                android:textColor="@color/black_3"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/location_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="6dp">
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_outline_location_on_24"
+                    android:backgroundTint="@color/black_3" />
+
+                <io.RentEasy.views.RegularTextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:maxLines="1"
+                    android:layout_centerVertical="true"
+                    android:text="Kukatpally, Hyderabad"
+                    android:textColor="@color/black_3"
+                    android:textSize="14sp"
+                    android:layout_toRightOf="@id/iv_location"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+Version 1.31.0  ?DONE?
+1 fix bugs and errors
+2 fix ad network issue and add in-app billings
+3 add firebase total properties statitics collecter
+4 add properties images using cloudinary and make image url tiny.(try to create new firebase project)
+
+
+Version 1.32.0  ?DONE?
+1 Notifications
+2 Filter Properties
+3 Map View 		<notImplemented>!
+
+
+Version 1.33.0
+1 Find by city name
+2 Find by location & map picker
+3 Rent payment gateway
+
+Version 1.34.0
+1 liked or favorite properties
+2 share property
+3 user can property delete
+4 Owner can  update property images
+
+Version 1.35.0
+1 Properties for lease
+2 Rewards after rent payment.(use open source reward) and collabrate with startups

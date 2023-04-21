@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="io.kodular.nsmarttechnologies6.RentEasy.activity.MyPostingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m50"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:id="@+id/back_lay"
+            android:layout_width="@dimen/m50"
+            android:layout_height="@dimen/m50">
+
+            <ImageView
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/m15"
+                android:background="@drawable/ic_back"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+        <io.RentEasy.views.MediumTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="My Postings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/total_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f05656"
+        android:layout_below="@id/header">
+
+        <io.RentEasy.views.RegularTextView
+            android:id="@+id/tv_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="@dimen/m5"
+            android:paddingBottom="@dimen/m5"
+            android:text="You have posted  classifieds"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16" />
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        android:layout_below="@id/total_lay"
+        app:adUnitId="ca-app-pub-1019423261424750/8754475886"></com.google.android.gms.ads.AdView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/adView">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:indeterminateTint="@color/red"
+        android:visibility="visible"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>

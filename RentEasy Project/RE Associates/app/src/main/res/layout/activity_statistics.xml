@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.StatisticsActivity"
+    android:background="#F1F1F1">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.renteasy.associates.views.BoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RentEasy Statistics"
+                android:textSize="30sp"
+                android:textColor="@color/primary_text_color"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_total_listings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Listing posted : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_new_listings"
+                    android:layout_below="@+id/tv_total_listings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recently posted : 0"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_active_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total active : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_recent_active"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last time : "
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="18sp"
+                    android:layout_below="@id/tv_active_users"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_date"
+                    android:layout_below="@+id/tv_recent_active"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_owners"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Owners : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+
+                <com.renteasy.associates.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recent owners : "
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_below="@id/tv_owners"
+                    android:textColor="@color/secondary_text_color"
+                    android:id="@+id/tv_recent_owners"
+                    android:textSize="16sp"/>
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_renters"
+                    android:layout_below="@+id/tv_recent_owners"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Renters : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.renteasy.associates.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recent renters : "
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_below="@id/tv_renters"
+                    android:textColor="@color/secondary_text_color"
+                    android:id="@+id/tv_recent_renters"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_connected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total users connected : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_connected_offline"
+                    android:layout_below="@+id/tv_connected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total users connected offline : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Users from Playstore : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_ads"
+                    android:layout_below="@+id/tv_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Users from Ads : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_frnd"
+                    android:layout_below="@+id/tv_ads"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Users from Friend suggested : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_net"
+                    android:layout_below="@+id/tv_frnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Users from Internet : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_pro_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Pro Users : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_new_pro"
+                    android:layout_below="@+id/tv_pro_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recently buyers : 0"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_properties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Properties : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_cams"
+                    android:layout_below="@+id/tv_properties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cameras : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_vechicles"
+                    android:layout_below="@+id/tv_cams"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicles : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_tools"
+                    android:layout_below="@+id/tv_vechicles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tools : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_cloths"
+                    android:layout_below="@+id/tv_tools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cloths : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_func"
+                    android:layout_below="@+id/tv_cloths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Funtions : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_music"
+                    android:layout_below="@+id/tv_func"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Musics : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_gad"
+                    android:layout_below="@+id/tv_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gadgets : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp" />
+
+                <com.renteasy.associates.views.MediumTextView
+                    android:id="@+id/tv_books"
+                    android:layout_below="@+id/tv_gad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Books : "
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_promote"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Promote Request"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_booking"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Booking requests"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btn_call_requests"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Call requests"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"/>
+
+
+            <Button
+                android:id="@+id/btn_spam"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Spam Reviews"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:layout_margin="20dp"
+                android:textAllCaps="false"/>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

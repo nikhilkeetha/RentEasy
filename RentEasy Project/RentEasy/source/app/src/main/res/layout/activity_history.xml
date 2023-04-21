@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.kodular.nsmarttechnologies6.RentEasy.activity.HistoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m50"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:id="@+id/back_lay"
+                android:layout_width="@dimen/m50"
+                android:layout_height="@dimen/m50">
+
+                <ImageView
+                    android:layout_width="@dimen/m25"
+                    android:layout_height="@dimen/m25"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:background="@drawable/ic_back"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Rent Payment History"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</RelativeLayout>

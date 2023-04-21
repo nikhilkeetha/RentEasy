@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m50"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:id="@+id/back_lay"
+                android:layout_width="@dimen/m50"
+                android:layout_height="@dimen/m50">
+
+                <ImageView
+                    android:layout_width="@dimen/m25"
+                    android:layout_height="@dimen/m25"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:background="@drawable/ic_back"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="My Account"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18"/>
+
+            <ImageView
+                android:id="@+id/iv_language"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_marginStart="@dimen/m5"
+                android:background="@drawable/change_language"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/app_name"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user"
+                android:layout_width="@dimen/m80"
+                android:layout_height="@dimen/m80"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15dp"
+                android:background="@drawable/user_2"
+                android:backgroundTint="@color/white"/>
+
+            <io.RentEasy.views.MediumTextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Nikhil Keetha"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <io.RentEasy.views.MediumTextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/m10"
+                android:layout_marginTop="5dp"
+                android:text="+91 1231231231"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16" />
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginEnd="@dimen/m15"
+            android:layout_marginBottom="@dimen/m5"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="15dp"
+            android:background="@color/colorAccent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="15dp">
+
+                    <ImageView
+                        android:id="@+id/iv_pro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_pro"
+                        android:backgroundTint="@color/yellow"
+                        android:layout_marginEnd="8dp" />
+
+                    <io.RentEasy.views.MediumTextView
+                        android:id="@+id/tv_pro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Go RentEasy Pro"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="@dimen/text_22" />
+
+
+
+                </LinearLayout>
+
+
+                <io.RentEasy.views.RegularTextView
+                    android:id="@+id/tv_proDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Become pro user for Ad-free experience. We recommend this pro plan to save your time while searching for rent."
+                    android:textColor="@color/grey"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/text_16" />
+
+                <io.RentEasy.views.MediumTextView
+                    android:id="@+id/tv_goPro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/m35"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_bg_25"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/m15"
+                    android:paddingEnd="@dimen/m15"
+                    android:text="Go Pro with just ₹50/-"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_14" />
+
+                <LinearLayout
+                    android:id="@+id/ads_blocked"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_property_status"
+                        android:backgroundTint="@color/red"/>
+
+                    <io.RentEasy.views.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ads are blocked."
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/primary_text_color"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_my_property"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/m15"
+            android:layout_marginBottom="@dimen/m5"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="@dimen/m10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50"
+                android:background="@drawable/ripple_effect">
+
+                <ImageView
+                    android:id="@+id/iv_my_property"
+                    android:layout_width="@dimen/m30"
+                    android:layout_height="@dimen/m30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:background="@drawable/ic_assignment"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+                <io.RentEasy.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:layout_toEndOf="@+id/iv_my_property"
+                    android:text="My Ads"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/text_16" />
+
+                <ImageView
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/m15"
+                    android:background="@drawable/ic_next"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_liked_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginEnd="@dimen/m15"
+            android:layout_marginBottom="@dimen/m5"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="@dimen/m10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50"
+                android:background="@drawable/ripple_effect">
+
+                <ImageView
+                    android:id="@+id/iv_liked_ads"
+                    android:layout_width="@dimen/m30"
+                    android:layout_height="@dimen/m30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:background="@drawable/ic_fill_heart"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+                <io.RentEasy.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:layout_toEndOf="@+id/iv_liked_ads"
+                    android:text="Favorite Ads"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/text_16" />
+
+                <ImageView
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/m15"
+                    android:background="@drawable/ic_next"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginEnd="@dimen/m15"
+            android:layout_marginBottom="@dimen/m5"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="@dimen/m10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50"
+                android:background="@drawable/ripple_effect">
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="@dimen/m30"
+                    android:layout_height="@dimen/m30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:background="@drawable/ic_share"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+                <io.RentEasy.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:layout_toEndOf="@+id/iv_share"
+                    android:text="Invite Friends"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/text_16" />
+
+                <ImageView
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/m15"
+                    android:background="@drawable/ic_next"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_rate_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginEnd="@dimen/m15"
+            android:layout_marginBottom="@dimen/m5"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="@dimen/m10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50"
+                android:background="@drawable/ripple_effect">
+
+                <ImageView
+                    android:id="@+id/iv_rate"
+                    android:layout_width="@dimen/m30"
+                    android:layout_height="@dimen/m30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:background="@drawable/ic_rate"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+                <io.RentEasy.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:layout_toEndOf="@+id/iv_rate"
+                    android:text="Rate Us"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/text_16" />
+
+                <ImageView
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/m15"
+                    android:background="@drawable/ic_next"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_contact_us"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginEnd="@dimen/m15"
+            android:layout_marginBottom="@dimen/m5"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="@dimen/m10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50"
+                android:background="@drawable/ripple_effect">
+
+                <ImageView
+                    android:id="@+id/iv_contact_us"
+                    android:layout_width="@dimen/m30"
+                    android:layout_height="@dimen/m30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:background="@drawable/ic_baseline_mail_24"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+                <io.RentEasy.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:layout_toEndOf="@+id/iv_contact_us"
+                    android:text="Contact Us"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/text_16" />
+
+                <ImageView
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/m15"
+                    android:background="@drawable/ic_next"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginEnd="@dimen/m15"
+            android:layout_marginBottom="@dimen/m5"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="@dimen/m10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50"
+                android:background="@drawable/ripple_effect">
+
+                <ImageView
+                    android:id="@+id/iv_help"
+                    android:layout_width="@dimen/m30"
+                    android:layout_height="@dimen/m30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:background="@drawable/ic_help"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+                <io.RentEasy.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:layout_toEndOf="@+id/iv_help"
+                    android:text="Help"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/text_16" />
+
+                <ImageView
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/m15"
+                    android:background="@drawable/ic_next"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_privacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginEnd="@dimen/m15"
+            android:layout_marginBottom="@dimen/m5"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="@dimen/m10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50"
+                android:background="@drawable/ripple_effect">
+
+                <ImageView
+                    android:id="@+id/iv_privacy"
+                    android:layout_width="@dimen/m30"
+                    android:layout_height="@dimen/m30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:background="@drawable/ic_privacy"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+                <io.RentEasy.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:layout_toEndOf="@+id/iv_privacy"
+                    android:text="Privacy and Terms"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/text_16" />
+
+                <ImageView
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/m15"
+                    android:background="@drawable/ic_next"
+                    android:backgroundTint="@color/secondary_black"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginEnd="@dimen/m15"
+            android:layout_marginBottom="@dimen/m5"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m50"
+                android:background="@drawable/ripple_3">
+
+                <io.RentEasy.views.MediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/m15"
+                    android:text="Logout"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_16" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/m15"
+            android:layout_marginTop="@dimen/m10"
+            android:layout_marginEnd="@dimen/m15"
+            android:layout_marginBottom="@dimen/m5"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="@dimen/m10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/m10"
+                android:background="@color/white">
+
+                <io.RentEasy.views.MediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Follow Us On"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/text_18" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/m15"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_facebook"
+                        android:layout_width="35dp"
+                        android:layout_height="@dimen/m35"
+                        android:layout_marginEnd="@dimen/m20"
+                        android:background="@drawable/facebook"
+                        android:contentDescription="@string/app_name" />
+
+                    <ImageView
+                        android:id="@+id/iv_instagram"
+                        android:layout_width="@dimen/m35"
+                        android:layout_height="@dimen/m35"
+                        android:layout_marginEnd="@dimen/m20"
+                        android:background="@drawable/instagram"
+                        android:contentDescription="@string/app_name" />
+
+                    <ImageView
+                        android:id="@+id/iv_linkedin"
+                        android:layout_width="@dimen/m35"
+                        android:layout_height="@dimen/m35"
+                        android:layout_marginEnd="@dimen/m20"
+                        android:background="@drawable/linkedin"
+                        android:contentDescription="@string/app_name" />
+
+                    <ImageView
+                        android:id="@+id/iv_youtube"
+                        android:layout_width="@dimen/m35"
+                        android:layout_height="@dimen/m35"
+                        android:layout_marginEnd="@dimen/m20"
+                        android:background="@drawable/youtube"
+                        android:contentDescription="@string/app_name" />
+
+                    <ImageView
+                        android:id="@+id/iv_linkedIn"
+                        android:layout_width="@dimen/m35"
+                        android:layout_height="@dimen/m35"
+                        android:background="@drawable/whatsapp"
+                        android:contentDescription="@string/app_name" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <io.RentEasy.views.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Version : 1.37.0 (developer)"
+            android:layout_margin="@dimen/m20"
+            android:textColor="@color/black_3"
+            android:textSize="17sp" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-1019423261424750/8754475886"></com.google.android.gms.ads.AdView>
+
+    </LinearLayout>
+
+
+</ScrollView>

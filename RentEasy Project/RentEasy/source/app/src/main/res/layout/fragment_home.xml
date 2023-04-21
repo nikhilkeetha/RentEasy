@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m50"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/icon2"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_image"
+            android:fontFamily="@font/luckiest_guy"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:fontFamily="@font/luckiest_guy" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/m15">
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:background="@drawable/ic_empty_heart"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_notification"
+                    android:layout_width="@dimen/m25"
+                    android:layout_height="@dimen/m25"
+                    android:layout_marginStart="@dimen/m5"
+                    android:background="@drawable/ic_notification"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:layout_width="18dp"
+                    android:layout_height="15dp"
+                    android:text="0"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/notification_bg_white"/>
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_marginStart="@dimen/m5"
+                android:background="@drawable/ic_three_dot_vertical"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/app_name" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/adView"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/auto_scroll_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m200"
+                android:layout_marginTop="@dimen/m10">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/image_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="right"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="@color/grey"
+                    app:sliderIndicatorUnselectedColor="@color/white"
+                    app:sliderScrollTimeInSec="3"
+                    app:sliderStartAutoCycle="true"/>
+
+
+            </RelativeLayout>
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_no_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/m180"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:text="@string/no_properties_banner"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_16"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:text="Hello Alex"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/m25"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m160"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_post_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/m15"
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="gone"/>
+
+                <io.RentEasy.views.MediumTextView
+                    android:id="@+id/tv_no_post_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/m15"
+                    android:text="No Post Property"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_16"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recommended_property_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/m15">
+
+                <io.RentEasy.views.MediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommended_properties"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_16" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/ic_next"
+                    android:backgroundTint="@color/primary_text_color"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m200">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_recommended_property"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/m15"
+                    android:nestedScrollingEnabled="false" />
+
+                <io.RentEasy.views.MediumTextView
+                    android:id="@+id/tv_no_recommended_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/m15"
+                    android:text="No Recommended Property"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_16"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rewards_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/m15"
+                android:visibility="gone">
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rewards"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_16" />
+
+                <ImageView
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/ic_next"
+                    android:backgroundTint="@color/primary_text_color"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m150"
+                android:layout_margin="@dimen/m15"
+                android:elevation="@dimen/m10"
+                app:cardCornerRadius="@dimen/m10"
+                app:cardPreventCornerOverlap="false"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_reward"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dummy_property"
+                    android:contentDescription="@string/app_name" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:adSize="BANNER"
+                app:adUnitId="ca-app-pub-1019423261424750/2762312056"></com.google.android.gms.ads.AdView>
+
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="See what people are saying"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_16" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_happy_users"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+                <io.RentEasy.views.MediumTextView
+                    android:id="@+id/tv_no_happy_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/m200"
+                    android:layout_margin="@dimen/m15"
+                    android:gravity="center"
+                    android:text="No Data"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_16"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/m15"
+                android:text="@string/made_in_for_india"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_16" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

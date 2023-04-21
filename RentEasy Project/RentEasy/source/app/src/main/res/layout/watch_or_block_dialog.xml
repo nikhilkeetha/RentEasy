@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="25dp"
+        app:cardCornerRadius="25dp"
+        android:layout_margin="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/display"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Contact this Property owner, "
+                android:layout_marginTop="25dp"
+                android:textSize="17sp"
+                android:textColor="@color/black"/>
+
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_ad"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/m40"
+                android:layout_gravity="center"
+                android:background="@drawable/button_bg_25"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Watch Ad"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"
+                android:layout_marginTop="20dp"/>
+
+            <io.RentEasy.views.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="or"
+                android:textSize="@dimen/text_16"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_block"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/m40"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_bg_25"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Go Pro at ₹50/-"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_property_status"
+                    android:backgroundTint="@color/red"/>
+
+                <io.RentEasy.views.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ads-free experience."
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/primary_text_color"/>
+
+            </LinearLayout>
+
+                
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
