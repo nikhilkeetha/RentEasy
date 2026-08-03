@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BrandListActivity"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m50"
+        app:cardElevation="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/m15"
+                android:background="@drawable/ic_search"
+                android:backgroundTint="@color/secondary_black"
+                android:contentDescription="@string/app_name" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search Brand"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_toRightOf="@id/iv_back"
+                android:textColorHint="@color/secondary_text_color"
+                android:textColor="@color/secondary_black"
+                android:textCursorDrawable="@drawable/cursor_color"/>
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header"
+        android:visibility="gone"
+        />
+
+    <ProgressBar
+        android:id="@+id/loading2"
+        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:indeterminateTint="@color/red"
+        android:visibility="visible"
+        android:layout_below="@id/listView"/>
+
+</RelativeLayout>

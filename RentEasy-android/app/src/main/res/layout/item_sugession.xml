@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/m10"
+    android:layout_marginTop="@dimen/m10"
+    android:layout_marginEnd="@dimen/m10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_map"
+                android:backgroundTint="@color/red"
+                android:layout_marginStart="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp">
+
+                <io.RentEasy.views.MediumTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_village_nm"
+                    android:layout_height="wrap_content"
+                    android:text="Village/City Name"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tv_village_nm">
+
+                    <io.RentEasy.views.RegularTextView
+                        android:id="@+id/tv_zipcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="000000"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="16sp"/>
+
+                    <io.RentEasy.views.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=","
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="16sp"/>
+
+                    <io.RentEasy.views.RegularTextView
+                        android:id="@+id/tv_state_mn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="State Name"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/m5"
+            android:background="@color/hint_color" />
+
+    </LinearLayout>
+
+</RelativeLayout>

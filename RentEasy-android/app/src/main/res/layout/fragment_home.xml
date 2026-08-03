@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#EFEFEF">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m50"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/easy_icon__1_"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_image"
+            android:fontFamily="@font/luckiest_guy"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:fontFamily="@font/luckiest_guy" />
+        
+        <RelativeLayout
+            android:id="@+id/city_change_lay"
+            android:background="@drawable/ripple_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/noti_lay"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            >
+            
+            <ImageView
+                android:id="@+id/location_iv"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_outline_location_on_24"
+                android:backgroundTint="@color/white"/>
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_city_nm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hyderabad"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/location_iv"/>
+
+            <ImageView
+                android:layout_toRightOf="@id/tv_city_nm"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_drop_down"
+                android:backgroundTint="@color/white"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/noti_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_notification"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_marginStart="@dimen/m5"
+                android:background="@drawable/ic_notification"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:layout_width="18dp"
+                android:layout_height="15dp"
+                android:text="0"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/notification_bg_white" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_header_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_marginEnd="@dimen/m15">
+
+            <ImageView
+                android:id="@+id/iv_whatsapp_help"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:src="@drawable/whatsapp"
+                android:visibility="gone"
+                android:contentDescription="@string/app_name"
+                android:layout_marginRight="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:background="@drawable/ripple_3"
+                android:src="@drawable/ic_fill_heart"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/white"
+                android:visibility="gone"/>
+
+
+            
+
+
+            <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_marginStart="@dimen/m5"
+                android:background="@drawable/ripple_3"
+                android:src="@drawable/ic_three_dot_vertical"
+                android:contentDescription="@string/app_name"
+                app:tint="@color/white" 
+                android:visibility="gone"/>
+
+
+        </LinearLayout> ///remove
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/adView"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/auto_scroll_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m200"
+                android:layout_marginTop="@dimen/m10">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/image_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="right"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="@color/grey"
+                    app:sliderIndicatorUnselectedColor="@color/white"
+                    app:sliderScrollTimeInSec="3"
+                    app:sliderStartAutoCycle="true"/>
+
+
+            </RelativeLayout>
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_no_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/m180"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:text="@string/no_properties_banner"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_16"
+                android:visibility="gone" />
+
+            <io.RentEasy.views.MediumTextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="Hi,"
+                android:textColor="@color/secondary_black"
+                android:textSize="30sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/category_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp">
+
+                <io.RentEasy.views.MediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Find by category"
+                    android:textColor="@color/secondary_black"
+                    android:textSize="@dimen/text_18" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_post_property"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginBottom="10dp"/>
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                app:adSize="BANNER"
+                android:layout_gravity="center"
+                app:adUnitId="ca-app-pub-3940256099942544/6300978111">
+            </com.google.android.gms.ads.AdView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m160"
+                android:visibility="gone">
+
+                <io.RentEasy.views.MediumTextView
+                    android:id="@+id/tv_no_post_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/m15"
+                    android:text="No Post Property"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/text_16"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:text="Recommended for you,"
+                android:textColor="@color/primary_text_color"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+
+
+
+            <ImageView
+                android:id="@+id/ivAd"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:scaleType="fitXY"/>
+
+            <RelativeLayout
+                android:id="@+id/rewards_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/m15"
+                android:visibility="gone">
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rewards"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_16" />
+
+                <ImageView
+                    android:layout_width="@dimen/m20"
+                    android:layout_height="@dimen/m20"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/ic_next"
+                    android:backgroundTint="@color/primary_text_color"
+                    android:contentDescription="@string/app_name" />
+
+            </RelativeLayout>
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:text="Residential Houses"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/text_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_properties"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/pb_properties"
+                android:layout_width="30dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:indeterminateTint="@color/colorPrimary"
+                android:visibility="visible" />
+
+            <io.RentEasy.views.MediumTextView
+                android:id="@+id/tv_diplay_photograaphers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="Photographers"
+                android:visibility="gone"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/text_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_cameras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/pb_camera"
+                android:layout_width="30dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:indeterminateTint="@color/colorPrimary"
+                android:visibility="gone" />
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:text="Cars"
+                android:visibility="gone"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_vehicles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/pb_vehicles"
+                android:layout_width="30dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:indeterminateTint="@color/colorPrimary"
+                android:visibility="gone" />
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="Function Halls/Banquet Halls"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/text_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_construction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/pb_tools"
+                android:layout_width="30dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:indeterminateTint="@color/colorPrimary"
+                android:visibility="visible" />
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="Commercial Shops"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/text_16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/pb_party"
+                android:layout_width="30dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:indeterminateTint="@color/colorPrimary"
+                android:visibility="visible" />
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="17dp"
+                android:text="What Users Say's"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/text_16" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/testnomial_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:sliderAnimationDuration="400"
+                    app:sliderAutoCycleDirection="right"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="400"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="@color/grey"
+                    app:sliderIndicatorUnselectedColor="@color/white"
+                    app:sliderScrollTimeInSec="2"
+                    app:sliderStartAutoCycle="true"
+                    android:layout_marginTop="10dp"/>
+
+
+
+            </RelativeLayout>
+
+            <io.RentEasy.views.MediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/m15"
+                android:text="@string/made_in_for_india"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/text_16" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

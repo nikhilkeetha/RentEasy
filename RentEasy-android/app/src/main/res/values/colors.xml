@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#f63737</color>
+    <color name="colorPrimaryVariant">#f63737</color>
+    <color name="colorOnPrimary">@color/white</color>
+    <color name="colorAccent">#f63737</color>
+
+
+    <color name="grey">#545454</color>
+    <color name="primary_text_color">#4c4b4b</color>
+    <color name="secondary_black">#222222</color>
+    <color name="black_3">#272727</color>
+    <color name="secondary_text_color">#A2A2A2</color>
+    <color name="hint_color">#949494</color>
+    <color name="card_view_bg_clr">@color/white</color>
+
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="green">#00D600</color>
+    <color name="red">#FD3A39</color>
+    <color name="yellow">#FE9D00</color>
+
+</resources>

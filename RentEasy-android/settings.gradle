@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "kodular.nsmarttechnologies6.RentEasy"

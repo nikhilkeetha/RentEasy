@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.kodular.nsmarttechnologies6.RentEasy.activity.HomeActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_lay">
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginTop="@dimen/m5"
+        android:background="#C8C8C8"
+        android:layout_above="@+id/bottom_lay"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m60"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:gravity="center"
+
+        android:weightSum="5">
+
+        <LinearLayout
+            android:id="@+id/home_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_home"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/explore_2"
+                android:backgroundTint="@color/colorPrimary"
+                android:contentDescription="@string/app_name" />
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Discover"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_lay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="@drawable/circle_ripple">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_search"
+                android:backgroundTint="@color/primary_text_color"
+                android:contentDescription="@string/app_name" />
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/search"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/add_property_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_add_property"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/add_1"
+                android:backgroundTint="@color/secondary_black"
+                android:contentDescription="@string/app_name" />
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_add_property"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Post Ad"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/text_12"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pay_rent_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_rent"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/pay_1"
+                android:backgroundTint="@color/secondary_black"
+                android:contentDescription="@string/app_name" />
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/pay_rent"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/text_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="@dimen/m25"
+                android:layout_height="@dimen/m25"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/user_1"
+                android:backgroundTint="@color/secondary_black"
+                android:contentDescription="@string/app_name" />
+
+            <io.RentEasy.views.RegularTextView
+                android:id="@+id/tv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Account"
+                android:textColor="@color/secondary_black"
+                android:textSize="@dimen/text_12" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
